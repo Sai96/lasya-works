@@ -4,23 +4,27 @@
     Explore the creative journey of Lasya Vishnubhatla. Here you'll find a curated selection of artworks, sketches, and creative projects that showcase passion and imagination.
   </p>
   <div class="gallery-preview">
-    <img src="assets/art1.jpg" alt="Artwork 1" class="art-thumb">
-    <img src="assets/art2.jpg" alt="Artwork 2" class="art-thumb">
-    <img src="assets/art3.jpg" alt="Artwork 3" class="art-thumb">
-    <img src="assets/art4.jpg" alt="Artwork 4" class="art-thumb">
-    <img src="assets/art5.jpg" alt="Artwork 5" class="art-thumb">
-    <img src="assets/art6.jpg" alt="Artwork 6" class="art-thumb">
-    <img src="assets/art7.jpg" alt="Artwork 7" class="art-thumb">
-    <img src="assets/art8.jpg" alt="Artwork 8" class="art-thumb">
-    <img src="assets/art9.jpg" alt="Artwork 9" class="art-thumb">
-    <img src="assets/art10.jpg" alt="Artwork 10" class="art-thumb">
-    <img src="assets/art11.jpg" alt="Artwork 11" class="art-thumb">
-    <img src="assets/art12.jpg" alt="Artwork 12" class="art-thumb">
+    @for (img of images; track img.src) {
+      <img
+        [src]="img.src"
+        [alt]="img.alt"
+        class="art-thumb"
+        (click)="openModal(img.src, img.alt)">
+    }
   </div>
   <div class="cta">
-    <a routerLink="/about" class="view-contact">Contact & Bio</a>
     <a href="https://www.instagram.com/lasya.vishnubhatla/" target="_blank" rel="noopener" class="view-instagram">
       View on Instagram
     </a>
   </div>
+
+  <!-- Modal Popup -->
+  @if (modalOpen) {
+    <div class="image-modal" (click)="closeModal()">
+      <div class="modal-content" (click)="$event.stopPropagation()">
+        <img [src]="modalImgSrc" [alt]="modalImgAlt" class="modal-img">
+        <button class="close-btn" (click)="closeModal()">×</button>
+      </div>
+    </div>
+  }
 </section>

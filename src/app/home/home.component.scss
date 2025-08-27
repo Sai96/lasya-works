@@ -46,13 +46,60 @@
         }
     }
 
+    .image-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+    }
+
+    .modal-content {
+        position: relative;
+        background: #fff;
+        padding: 1rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+        max-width: 90vw;
+        max-height: 90vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal-img {
+        max-width: 80vw;
+        max-height: 80vh;
+        border-radius: 0.5rem;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 0.5rem;
+        right: 1rem;
+        background: #E1306C;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        font-size: 2rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        cursor: pointer;
+        line-height: 2.5rem;
+        text-align: center;
+    }
+
     .cta {
         display: flex;
         justify-content: center;
         gap: 1.5rem;
         margin-top: 1.5rem;
 
-        .view-contact,
         .view-instagram {
             padding: 0.7rem 1.5rem;
             border-radius: 2rem;
