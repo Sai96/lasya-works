@@ -17,8 +17,7 @@ export class HomeComponent {
     { src: 'assets/art7.jpg', alt: 'Artwork 7' },
     { src: 'assets/art8.jpg', alt: 'Artwork 8' },
     { src: 'assets/art9.jpg', alt: 'Artwork 9' },
-    { src: 'assets/art10.jpg', alt: 'Artwork 10' },
-    { src: 'assets/art11.jpg', alt: 'Artwork 11' }
+    { src: 'assets/art10.jpg', alt: 'Artwork 10' }
   ];
 
   modalOpen = false;
